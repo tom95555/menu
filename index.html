@@ -1,89 +1,123 @@
-
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>მენიუ - New Tiflis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Tiflis Menu</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; }
-    .lang-switch { margin-bottom: 20px; }
-    .lang-switch button { margin-right: 10px; }
-    .section { margin-bottom: 30px; }
-    .item { display: flex; align-items: center; margin-bottom: 10px; }
-    .item img { width: 50px; height: auto; margin-left: 10px; border-radius: 5px; }
-    .en { display: none; }
-  </style>
-  <script>
-    function switchLang(lang) {
-      document.querySelectorAll('.ka, .en').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'block');
+    body {
+      font-family: Arial, sans-serif;
+      background: url('images.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+      margin: 0;
+      padding: 20px;
     }
-  </script>
+
+    h1 {
+      text-align: center;
+    }
+
+    .lang-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .lang-buttons button {
+      margin: 0 10px;
+      padding: 5px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .menu-section {
+      max-width: 600px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .whatsapp {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #25D366;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <div class="lang-switch">
-    <button onclick="switchLang('ka')">ქართული</button>
+  <div class="lang-buttons">
     <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ar')">Arabic</button>
   </div>
 
-  <div class="ka">
-    <h1>📋 მენიუ - New Tiflis</h1>
-    <div class="section">
-      <h2>🥤 სასმელები</h2>
-      <div class="item">კოკა-კოლა 0.5 ლ – 4 ლ <img src="file-Rb8ioyNiy6dXjLwLkMMFVm" alt="cola"></div>
-      <div class="item">სპრაიტი 0.5 ლ – 4 ლ <img src="file-WD8AUY5MgqvJjgbC2zcDqC" alt="sprite"></div>
-      <div class="item">ბორჯომი 0.5 ლ – 4 ლ <img src="file-JyLMd7tZ3RBfRzqN3dLp9e" alt="borjomi"></div>
-      <div class="item">წყალი 0.5 ლ – 2 ლ</div>
-    </div>
-    <div class="section">
-      <h2>🍫 ტკბილეული</h2>
-      <ul>
-        <li>სნიკერსი – 3 ლ</li>
-        <li>ბაუნტი – 3 ლ</li>
-        <li>ქიტ ქათი – 3 ლ</li>
-        <li>ტვიქსი – 3 ლ</li>
-      </ul>
-    </div>
-    <div class="section">
-      <h2>🍺 ალკოჰოლური</h2>
-      <ul>
-        <li>ჰაინეკენი 0.33 ლ – 7.5 ლ</li>
-        <li>კაია კი – 6.5 ლ</li>
-      </ul>
-    </div>
-    <div style="text-align:center; margin-top: 40px;">
-      <a href="https://wa.me/995595848884" style="font-size: 18px; color: green; text-decoration: none;">📲 დაწერე WhatsApp-ზე</a>
+  <div id="en" class="menu-section">
+    <h1>Menu - New Tiflis</h1>
+    <h2>Drinks</h2>
+    <p>Cola 0.5L — 4 ₾</p>
+    <p>Sprite 0.5L — 4 ₾</p>
+    <p>Borjomi 0.5L — 4 ₾</p>
+    <p>Water 0.5L — 2 ₾</p>
+
+    <h2>Sweets</h2>
+    <p>Snickers — 3 ₾</p>
+    <p>Bounty — 3 ₾</p>
+    <p>Kit Kat — 3 ₾</p>
+    <p>Twix — 3 ₾</p>
+
+    <h2>Beer</h2>
+    <p>Heineken 0.33L — 7.5 ₾</p>
+    <p>Kala ki — 6.5 ₾</p>
+
+    <div class="whatsapp">
+      📱 For orders, message us on WhatsApp:<br/>
+      <a href="https://wa.me/995595848884">Message on WhatsApp</a>
     </div>
   </div>
 
-  <div class="en">
-    <h1>📋 Menu - New Tiflis</h1>
-    <div class="section">
-      <h2>🥤 Drinks</h2>
-      <div class="item">Coca-Cola 0.5L – 4 GEL <img src="file-Rb8ioyNiy6dXjLwLkMMFVm" alt="cola"></div>
-      <div class="item">Sprite 0.5L – 4 GEL <img src="file-WD8AUY5MgqvJjgbC2zcDqC" alt="sprite"></div>
-      <div class="item">Borjomi 0.5L – 4 GEL <img src="file-JyLMd7tZ3RBfRzqN3dLp9e" alt="borjomi"></div>
-      <div class="item">Water 0.5L – 2 GEL</div>
+  <div id="ar" class="menu-section hidden" dir="rtl">
+    <h1>قائمة - نيو تفليس</h1>
+    <h2>مشروبات</h2>
+    <p>كوكا كولا 0.5 لتر — 4 ₾</p>
+    <p>سبرايت 0.5 لتر — 4 ₾</p>
+    <p>بورجومي 0.5 لتر — 4 ₾</p>
+    <p>ماء 0.5 لتر — 2 ₾</p>
+
+    <h2>حلويات</h2>
+    <p>سنيكرز — 3 ₾</p>
+    <p>باونتي — 3 ₾</p>
+    <p>كيت كات — 3 ₾</p>
+    <p>تويكس — 3 ₾</p>
+
+    <h2>بيرة</h2>
+    <p>هاينكن 0.33 لتر — 7.5 ₾</p>
+    <p>كالا كي — 6.5 ₾</p>
+
+    <div class="whatsapp">
+      📱 للطلب، راسلنا على واتساب:<br/>
+      <a href="https://wa.me/995595848884">راسلنا على واتساب</a>
     </div>
-    <div class="section">
-      <h2>🍫 Sweets</h2>
-      <ul>
-        <li>Snickers – 3 GEL</li>
-        <li>Bounty – 3 GEL</li>
-        <li>Kit Kat – 3 GEL</li>
-        <li>Twix – 3 GEL</li>
-      </ul>
-    </div>
-    <div class="section">
-      <h2>🍺 Beer</h2>
-      <ul>
-        <li>Heineken 0.33L – 7.5 GEL</li>
-        <li>Kaia Ki – 6.5 GEL</li>
-      </ul>
-    </div>
-    <div style="text-align:center; margin-top: 40px;">
-      <a href="https://wa.me/995595848884" style="font-size: 18px; color: green; text-decoration: none;">📲 Contact via WhatsApp</a>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.getElementById("en").classList.add("hidden");
+      document.getElementById("ar").classList.add("hidden");
+      document.getElementById(lang).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
     </div>
   </div>
 </body>
